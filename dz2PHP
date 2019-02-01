@@ -1,0 +1,94 @@
+<?php 
+header("Content-Type: text/html; charset=UTF-8"); //для отображения русских символов
+
+//0. Дан массив с элементами 26, 17, 136, 12, 79, 15. С помощью цикла foreach 
+//найдите сумму квадратов элементов этого массива.
+
+// function sumSquares($arr){
+//     $sum = 0;
+//     foreach ($arr as $number) {
+//         $number *= $number;
+//         $sum += $number;
+//     }
+//     return $sum;
+// }
+
+// $elements = [26, 17, 136, 12, 79, 15];
+// echo sumSquares($elements);
+
+//1. Создать массив и наполнить его через цикл следующим рядом чисел 1+4+7+10+...+112
+
+// function puckArr($array){
+//     $array[]=1;
+//     for ($i=0; ; $i++) { 
+//         if ($array[$i]==112) {
+//             break;
+//         }
+//         $array[$i+1] = $array[$i]+3;
+        
+//     }
+//     return $array;
+// }
+
+// $arr = [];
+// var_dump(puckArr($arr));
+
+//2. Напишите функцию get_order($string), которая отсортирует все слова в заданном предложении 
+//$string в алфавитном порядке. Например get_order("ноты акустика гитара"),
+// функция должна вернуть "акустика гитара ноты" 
+
+// function get_order($string){
+//     $arr = explode(' ', $string);
+//     sort($arr);
+//     return implode(' ', $arr);
+
+// }
+
+// var_dump(get_order("ноты акустика гитара"));
+
+//3. Напишите функцию truncate_string($str, $maxsymbol), которая проверяет длину строки $str, и если
+//она превосходит $maxsymbol – заменяет конец $str на "...", так чтобы ее длина стала равна $maxsymbol.
+
+// function truncate_string($str, $maxsymbol){
+//     $length = strlen($str);
+//     if ($length>$maxsymbol) {
+//         return substr($str, 0, $maxsymbol-3) . '...';
+//     } 
+//     else return $str;
+// }
+
+// echo(truncate_string('0123456789', 6));
+
+//1. Написать функцию, которая будет формировать абревиатуру выражения. Например Донбасская государственная машиностроительная академия - ДГМА
+
+// function abbreviature($fullString){
+//     $vords = explode(' ', $fullString);
+//     foreach ($vords as $vord) {
+//         echo(strtoupper($vord[0]));
+//     }
+// }
+
+// abbreviature('dONBASS sTATE ENGINEERING aCADEMY');
+
+//2. Написать функцию, которая принимает строку, а возвращает так же строку, но каждое слово которой начинается с большой буквы.
+
+// function firstLetterUpper($str){
+//     $vords = explode(' ', $str);
+//     foreach ($vords as $vord) {
+//         echo strtoupper($vord[0]) . substr($vord, 1) . ' ';
+//     }
+// }
+
+// firstLetterUpper('donbass state engineering academy');
+
+//3. написать функцию formatEmpty, которая принимает значение и если оно не пустое  - возвращает его, если пустое - возвращает строку "Нет данных".
+
+// function formatEmpty($str){
+//     $length = strlen($str);
+//     if ($length===0) {
+//         return 'Нет данных';
+//     } 
+//     else return $str;
+// }
+
+// echo(formatEmpty(''));
