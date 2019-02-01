@@ -1,0 +1,37 @@
+//1. Написать функцию, которая будет формировать абревиатуру выражения. Например Донбасская государственная машиностроительная академия - ДГМА
+
+function abbreviature($fullString){
+    $vords = explode(' ', $fullString);
+    foreach ($vords as $vord) {
+        $arr[] = strtoupper($vord[0]);
+    }
+    $str = implode('', $arr);
+    return $str;
+}
+
+echo(abbreviature('dONBASS sTATE ENGINEERING aCADEMY'));
+
+
+
+//2. Написать функцию, которая принимает строку, а возвращает так же строку, но каждое слово которой начинается с большой буквы.
+
+function firstLetterUpper($str){
+    $vords = explode(' ', $str);
+    foreach ($vords as $vord) {
+        $arr[] = strtoupper($vord[0]) . substr($vord, 1) . ' ';
+    }
+    $upperStr = implode('', $arr);
+    return $upperStr;
+}
+
+echo(firstLetterUpper('donbass state engineering academy'));
+
+
+//3. написать функцию formatEmpty, которая принимает значение и если оно не пустое  - возвращает его, если пустое - возвращает строку "Нет данных".
+
+function formatEmpty($str){
+    $result = empty($str)?'Нет данных' : $str;
+    return $result;
+}
+
+echo(formatEmpty(''));
